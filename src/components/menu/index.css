@@ -1,45 +1,7 @@
-:root {
-  /* colors */
-  --color-bg-blue: rgba(122, 179, 243, 0.2);
-  --color-bg-pink: rgba(233, 121, 178, 0.2);
-  --color-bg-purple: rgba(215, 215, 249, 0.2);
-  --color-bg-green: rgba(120, 247, 187, 0.2);
-  --color-purple: #6B00F5;
-  --color-white: #FFFFFF;
-
-  /* shadows */
-  --shadow-box: 0px 0px 70px #C7CBE3;
-
-  /* spacing */
-  --left-offset: 28px;
-}
-
-.menu__section {
-  border-radius: 25px;
-  box-shadow: var(--shadow-box);
-  height: 80vh;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  padding-top: 50px;
-  width: 375px;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.menu__section::-webkit-scrollbar {
-  display: none;
-}
-
-.menu__heading {
-  font-size: 2rem;
-  line-height: 1.5;
-  margin: 0 0 38px var(--left-offset);
-}
-
 .menu__item {
   background-color: var(--color-bg-blue);
   border-radius: 20px;
-  left: var(--left-offset);
+  width: calc(100% + 60px);
   margin-bottom: 33px;
   padding: 25px 32px 40px 156px;
   position: relative;
