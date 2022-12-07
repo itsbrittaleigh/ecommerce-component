@@ -1,9 +1,10 @@
-import React from 'react';
-import menuItems from '../../data/menuItems';
+import React, { useContext } from 'react';
 import convertCentsToDollars from '../../helpers/convertCentsToDollars';
 import './index.css';
+import CartContext from '../../context/CartContext';
 
 const Menu = () => {
+  const { addToCart, menuItems } = useContext(CartContext);
 
   return (
     <section className="panel__section">
@@ -30,14 +31,6 @@ const Menu = () => {
       </div>
     </section>
   );
-
-  function addToCart(id) {
-    const match = menuItems.find((item) => item.id === id);
-
-    match.count += 1;
-
-    console.log(menuItems);
-  }
 };
 
 export default Menu;

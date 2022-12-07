@@ -1,12 +1,13 @@
-import React from 'react';
-import menuItems from '../../data/menuItems';
+import React, { useContext } from 'react';
 import convertCentsToDollars from '../../helpers/convertCentsToDollars';
+import CartContext from '../../context/CartContext';
 import './index.css';
 
 const Cart = () => {
   const taxRate = 0.0975;
-  const cartItems = menuItems.filter((item) => item.count > 0);
-  const subTotal = cartItems.reduce((accumulator, currentValue) => accumulator + (currentValue.count * currentValue.price), 0);
+  const { cartItems, increaseCount, decreaseCount } = useContext(CartContext);
+  const subTotal = cartItems.reduce((accumulator, currentValue) =>
+    accumulator + (currentValue.count * currentValue.price), 0);
   const tax = subTotal * taxRate;
   const total = subTotal + tax;
 
@@ -35,6 +36,7 @@ const Cart = () => {
                         <button
                           aria-label={`Decrease ${item.name} quantity to ${item.count - 1}`}
                           className="cart-item__button cart-item__button--decrease"
+                          onClick={() => decreaseCount(item.id)}
                         >
                           <img src="./images/chevron.svg" alt="Decrease icon" />
                         </button>
@@ -42,6 +44,7 @@ const Cart = () => {
                         <button
                           aria-label={`Increase ${item.name} quantity to ${item.count + 1}`}
                           className="cart-item__button cart-item__button--increase"
+                          onClick={() => increaseCount(item.id)}
                         >
                           <img src="./images/chevron.svg" alt="Increase icon" />
                         </button>

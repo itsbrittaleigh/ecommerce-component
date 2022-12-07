@@ -1,14 +1,17 @@
 import Cart from './components/cart';
+import CartProvider from './context/CartProvider';
 import Menu from './components/menu';
 import './styles.css';
 
 const App = () => {
 
   return (
-    <>
-      <Menu />
-      <Cart />
-    </>
+    <CartProvider>
+      <>
+        <Menu />
+        <Cart />
+      </>
+    </CartProvider>
   );
 };
 // function App() {
