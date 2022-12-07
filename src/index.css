@@ -27,7 +27,10 @@ body {
 }
 
 #root {
-  height: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 *,
@@ -44,6 +47,8 @@ body {
   --color-bg-green: rgba(120, 247, 187, 0.2);
   --color-purple: #6B00F5;
   --color-white: #FFFFFF;
+  --color-gray: #D7D7F9;
+  --color-black: #000000;
 
   /* shadows */
   --shadow-box: 0px 0px 70px #C7CBE3;
@@ -63,6 +68,10 @@ body {
 
 .panel__section::-webkit-scrollbar {
   display: none;
+}
+
+.panel__section:first-of-type {
+  margin-right: 50px;
 }
 
 .panel__heading {

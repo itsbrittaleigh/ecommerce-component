@@ -1,0 +1,125 @@
+.cart-item {
+  border-bottom: 1px solid var(--color-gray);
+  display: flex;
+  padding: 33px 0 44px;
+}
+
+.cart-item:first-of-type {
+  padding-top: 0;
+}
+
+.cart-item:last-of-type {
+  border-bottom-width: 5px;
+}
+
+.cart-item__image-container {
+  height: 64px;
+  position: relative;
+  width: 64px;
+}
+
+.cart-item__image {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.cart-item__quantity--image {
+  align-items: center;
+  background-color: var(--color-black);
+  border-radius: 32px;
+  color: var(--color-white);
+  display: flex;
+  font-weight: bold;
+  height: 32px;
+  justify-content: center;
+  left: 50%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+}
+
+.cart-item__content-container {
+  padding: 10px 0 0 17px; 
+}
+
+.cart-item__name {
+  font-size: 1.125rem;
+  line-height: 1.1;
+  font-weight: normal;
+  margin: 0;
+}
+
+.cart-item__price {
+  font-weight: bold;
+  margin: 0 0 16px;
+}
+
+.cart-item__button-container {
+  align-items: center;
+  display: flex;
+}
+
+.cart-item__button {
+  align-items: center;
+  background-color: var(--color-purple);
+  border-radius: 32px;
+  border: none;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  width: 32px;
+}
+
+.cart-item__button--increase {
+  transform: rotate(180deg);
+}
+
+.cart-item__quantity {
+  font-weight: bold;
+  margin: 0 12px;
+}
+
+.card-item__quantity-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-item__total-price {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1;
+  margin: 0;
+}
+
+.total__container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.total {
+  list-style: none;
+  margin: 35px 0;
+  padding: 0;
+}
+
+.total__label {
+  font-weight: bold;
+  padding: 12px 25px 12px 0;
+  text-align: right;
+}
+
+.total__value {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1;
+  margin: 0;
+  text-align: right;
+}
+
+.total__value--emphasized {
+  color: var(--color-purple);
+}

@@ -5,7 +5,7 @@ const menuItems = [
     price: 223,
     image: 'plate__french-fries.png',
     alt: 'French Fries',
-    count: 0,
+    count: 3,
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const menuItems = [
     price: 512,
     image: 'plate__salmon-vegetables.png',
     alt: 'Salmon and Vegetables',
-    count: 0,
+    count: 2,
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const menuItems = [
     price: 782,
     image: 'plate__spaghetti-meat-sauce.png',
     alt: 'Spaghetti with Meat Sauce',
-    count: 0,
+    count: 1,
   },
   {
     di: 4,

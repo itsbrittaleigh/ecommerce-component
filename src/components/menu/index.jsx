@@ -1,5 +1,6 @@
 import React from 'react';
 import menuItems from '../../data/menuItems';
+import convertCentsToDollars from '../../helpers/convertCentsToDollars';
 import './index.css';
 
 const Menu = () => {
@@ -16,7 +17,7 @@ const Menu = () => {
               src={`./images/${item.image}`}
             />
             <h3 className="menu-item__name">{item.name}</h3>
-            <p className="menu-item__price">{`$${formatPrice(item.price)}`}</p>
+            <p className="menu-item__price">{`$${convertCentsToDollars(item.price)}`}</p>
             <button
               className="menu-item__button"
               onClick={() => addToCart(item.id)}
@@ -29,10 +30,6 @@ const Menu = () => {
       </div>
     </section>
   );
-
-  function formatPrice(cents) {
-    return cents / 100;
-  }
 
   function addToCart(id) {
     const match = menuItems.find((item) => item.id === id);
