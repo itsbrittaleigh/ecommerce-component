@@ -7,7 +7,7 @@ const Menu = () => {
   const { addToCart, menuItems } = useContext(CartContext);
 
   return (
-    <section className="panel__section">
+    <section className="panel">
       <h2 className="panel__heading">To Go Menu</h2>
       <div className="panel__content">
         {menuItems.map((item) => (

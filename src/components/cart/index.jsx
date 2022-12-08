@@ -12,7 +12,7 @@ const Cart = () => {
   const total = subTotal + tax;
 
   return (
-    <section className="panel__section">
+    <section className="panel">
       <h2 className="panel__heading">Your Cart</h2>
       <div className="panel__content">
         {cartItems.length > 0 ? (
