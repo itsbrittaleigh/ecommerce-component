@@ -58,6 +58,7 @@ const CartProvider = ({ children }) => {
 
   useEffect(() => {
     setCartItems(menuItems.filter((item) => item.count > 0));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [stringifiedMenuItems]);
 
   return (
