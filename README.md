@@ -1,4 +1,22 @@
-# Getting Started with Create React App
+# 2022 Advent CSS / JS Day 2 - E-Commerce Component
+Users should be able to:
+
+- View the plates/menu options on the left side of the screen and add them to your cart on the right side.
+- When there are no plates within your cart, you should see a message that says, “Your cart is empty.”
+- When a plate is added to your cart, the Subtotal and Totals will automatically update.
+- When products are in your cart, you should be able to increase and decrease the quantity.
+  - A user should not be able to mark the quantity as a negative number.
+  - If the quantity goes down to 0, the user will have the option to delete or remove the product for their cart entirely.
+- Tax is based on the state of Tennessee sales tax: 0.0975
+
+## Designs
+### Cart Zero State
+![Desktop Cart Zero State](./images/Desktop-1.png)
+
+### Cart Filled State
+![Desktop Cart Filled State](./images/Desktop-2.png)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
