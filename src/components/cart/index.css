@@ -1,3 +1,29 @@
+.cart {
+  position: fixed;
+  transition: 0.2s ease-out;
+}
+
+.cart--open {
+  opacity: 1;
+  left: 50vw;
+  transform: translateX(-50%);
+}
+
+.cart--closed {
+  opacity: 0;
+  left: 100vw;
+}
+
+@media only screen and (min-width: 820px) {
+  .cart {
+    position: static;
+  }
+
+  .cart--closed {
+    opacity: 1;
+  }
+}
+
 .cart-item {
   border-bottom: 1px solid var(--color-gray);
   display: flex;

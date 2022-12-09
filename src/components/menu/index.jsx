@@ -4,11 +4,25 @@ import './index.css';
 import CartContext from '../../context/CartContext';
 
 const Menu = () => {
-  const { addToCart, menuItems } = useContext(CartContext);
+  const { addToCart, setCartIsOpen, menuItems } = useContext(CartContext);
 
   return (
     <section className="panel">
-      <h2 className="panel__heading">To Go Menu</h2>
+      <div className="panel__heading-container">
+        <h2 className="panel__heading">To Go Menu</h2>
+        <button
+          aria-label="View cart"
+          className="panel__heading-button"
+          onClick={() => setCartIsOpen(true)}
+        >
+          <img
+            alt="Cart icon"
+            aria-hidden="true"
+            className="panel__heading-button-image"
+            src="./images/cart.svg"
+          />
+        </button>
+      </div>
       <div className="panel__content">
         {menuItems.map((item) => (
           <div className="menu__item" key={item.id}>

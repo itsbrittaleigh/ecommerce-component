@@ -5,15 +5,30 @@ import './index.css';
 
 const Cart = () => {
   const taxRate = 0.0975;
-  const { cartItems, increaseCount, decreaseCount } = useContext(CartContext);
+  const { cartIsOpen, cartItems, decreaseCount, increaseCount, setCartIsOpen }
+    = useContext(CartContext);
   const subTotal = cartItems.reduce((accumulator, currentValue) =>
     accumulator + (currentValue.count * currentValue.price), 0);
   const tax = subTotal * taxRate;
   const total = subTotal + tax;
 
   return (
-    <section className="panel">
-      <h2 className="panel__heading">Your Cart</h2>
+    <section className={`panel cart ${cartIsOpen ? 'cart--open' : 'cart--closed'}`}>
+      <div className="panel__heading-container">
+        <h2 className="panel__heading">Your Cart</h2>
+        <button
+          aria-label="View cart"
+          className="panel__heading-button"
+          onClick={() => setCartIsOpen(false)}
+        >
+          <img
+            alt="Cart icon"
+            aria-hidden="true"
+            className="panel__heading-button-image"
+            src="./images/close.svg"
+          />
+        </button>
+      </div>
       <div className="panel__content">
         {cartItems.length > 0 ? (
           <>

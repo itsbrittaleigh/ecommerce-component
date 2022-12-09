@@ -75,8 +75,42 @@ body {
   display: none;
 }
 
-.panel:first-of-type {
-  margin-right: 50px;
+@media only screen and (min-width: 820px) {
+  .panel:first-of-type {
+    margin-right: 50px;
+  }
+}
+
+.panel__heading-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.panel__heading-button {
+  align-items: center;
+  background-color: var(--color-purple);
+  border-radius: 100%;
+  border: none;
+  color: var(--color-white);
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  width: 40px;
+  visibility: visible;
+}
+
+@media only screen and (min-width: 820px) {
+  .panel__heading-button {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.panel__heading-button-image {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .panel__heading {

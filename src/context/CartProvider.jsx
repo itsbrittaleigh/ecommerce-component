@@ -54,6 +54,7 @@ const CartProvider = ({ children }) => {
   ]);
   const [stringifiedMenuItems, setStringifiedMenuItems] = useState(JSON.stringify(menuItems));
   const [cartItems, setCartItems] = useState([]);
+  const [cartIsOpen, setCartIsOpen] = useState(false);
 
   useEffect(() => {
     setCartItems(menuItems.filter((item) => item.count > 0));
@@ -63,10 +64,12 @@ const CartProvider = ({ children }) => {
     <CartContext.Provider
       value={{
         addToCart,
+        cartIsOpen,
         cartItems,
         decreaseCount,
         increaseCount,
-        menuItems
+        menuItems,
+        setCartIsOpen
       }}
     >
       {children}
